@@ -31,7 +31,7 @@ int main (int argc, char **argv)
 			"number dude.\n");
 	}
 	else
-		printf("Digits reversed: %d\n", rev_int(num));
+		printf("Digits reversed: %02d\n", rev_int(num));
 	
 	int i, j, k;
 	i = j = k = 1;
