@@ -20,11 +20,21 @@ Next steps:
 mkdir ~/swdev
 cd ~/swdev
 
+Best to login to github first and check out help section there for clear instructions.
+
+Follow setting up ssh key instructions first.
+
+change to ~/swdev on local computer.
+
 git clone git@github.com:j-angus/c.git
 
 creates directory: ~/swdev/c
 
-do some work.
+change to ~/swdev/c
+
+This is the directory for all c development.
+
+Do some work.
 
 add files to be tracked:
 
@@ -38,16 +48,24 @@ git commit
 
 will commit all files added in the last step.
 
-push and merge changes to remote, iinet repository.
-
+push and merge changes to remote, github, repository.
 
 
 to update on github:
 
 git push -u origin master
 
+After we're all setup locally and we want to get the latest revisions from github:
 
+git fetch origin
 
+git merge
+
+OR
+
+git pull origin
+
+(git fetch and git merge in one step)
 
 
 
