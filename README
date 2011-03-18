@@ -1,22 +1,26 @@
 setup git repository for storing 'c' source code.
+--------------------------------------------------
 
-Main repository is stored on iinet server.
+Main repository is stored on GitHub server: github.com
 
-After initial setup onto local machine, all changes should be pushed back to iinet after finishing work on local machine.
+ssh passwd: guitarz1i
+github login: duff.angus@gmail.com
+github passwd: guitarz1
 
+setup git:
+------------
+Global setup:
 
-gvfs ftp filesystem info:
-members.iinet.net.au
-jason.angus
+  git config --global user.name "Jason Angus"
+  git config --global user.email jaduffa@gmail.com
+  git config --global color.ui true
 
-ln -s /home/<username>/.gvfs/ftp as jason.angus on members.iinet.net.au/swdev /mnt/iinet_swdev
-
-iinet_swdev -> /home/jason/.gvfs/ftp as jason.angus on members.iinet.net.au/swdev//
+Next steps:
 
 mkdir ~/swdev
 cd ~/swdev
 
-git clone --no-hardlinks /mnt/iinet_swdev/c.git/
+git clone git@github.com:j-angus/c.git
 
 creates directory: ~/swdev/c
 
@@ -36,24 +40,11 @@ will commit all files added in the last step.
 
 push and merge changes to remote, iinet repository.
 
-git push
 
-HORRIBLE - iinet ftp is not working at all.
-
-using github for now (github.com)
-
-duff.angus@gmail.com
-
-guitarz1
 
 to update on github:
 
-git remote add githubhttps https://j-angus@github.com/j-angus/c.git
-
-git push -u githubhttps master
-
-change remote/githubhttps to just "github" later, after everything is all sussed.
- 
+git push -u origin master
 
 
 
