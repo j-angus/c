@@ -1,0 +1,29 @@
+setup git repository for storing 'c' source code.
+
+Main repository is stored on iinet server.
+
+After initial setup onto local machine, all changes should be pushed back to iinet after finishing work on local machine.
+
+
+gvfs ftp filesystem info:
+members.iinet.net.au
+jason.angus
+
+ln -s /home/<username>/.gvfs/ftp as jason.angus on members.iinet.net.au/swdev /mnt/iinet_swdev
+
+iinet_swdev -> /home/jason/.gvfs/ftp as jason.angus on members.iinet.net.au/swdev//
+
+mkdir ~/swdev
+cd ~/swdev
+
+git clone --no-hardlinks /mnt/iinet_swdev/c.git/
+
+creates directory: ~/swdev/c
+
+do some work.
+
+save and commit changes to local git repository.
+
+push changes to remote, iinet repository.
+
+
