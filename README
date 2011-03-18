@@ -38,28 +38,46 @@ Do some work.
 
 add files to be tracked:
 
-git add <path to files>
+$ git add <path to files>
 
 # Let's only store *.c source files and other informational text files. No compiled or object files for now.
 
 save and commit changes to local git repository.
 
-git commit
+$ git commit
 
 will commit all files added in the last step.
+
+Or we can add and commit previously added files with:
+$ git commit -am "commit comment"
 
 push and merge changes to remote, github, repository.
 
 
 to update on github:
 
-git push -u origin master
+$ git push -u origin master
+
 
 After we're all setup locally and we want to get the latest revisions from github:
+-----------------------------------------------------------------------------------
 
-git pull origin
+check to see if we are up to date or not:
 
-(git fetch and git merge in one step)
+$ git remote show origin
 
+get changes from remote but don't merge:
+$ git fetch
+look at the differences after a fetch:
+$ git diff
+$ git show
 
+if we're happy with changes, we can merge this way:
+$ git merge origin/master
+
+we can fetch and merge in one step with:
+$ git pull origin
+
+or even:
+$ git pull
 
