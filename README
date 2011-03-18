@@ -57,12 +57,6 @@ git push -u origin master
 
 After we're all setup locally and we want to get the latest revisions from github:
 
-git fetch origin
-
-git merge
-
-OR
-
 git pull origin
 
 (git fetch and git merge in one step)
