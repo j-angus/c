@@ -38,5 +38,25 @@ push and merge changes to remote, iinet repository.
 
 git push
 
+HORRIBLE - iinet ftp is not working at all.
+
+using github for now (github.com)
+
+duff.angus@gmail.com
+
+guitarz1
+
+to update on github:
+
+git remote add githubhttps https://j-angus@github.com/j-angus/c.git
+
+git push -u githubhttps master
+
+change remote/githubhttps to just "github" later, after everything is all sussed.
+ 
+
+
+
+
 
 
