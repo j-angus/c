@@ -22,8 +22,21 @@ creates directory: ~/swdev/c
 
 do some work.
 
+add files to be tracked:
+
+git add <path to files>
+
+# Let's only store *.c source files and other informational text files. No compiled or object files for now.
+
 save and commit changes to local git repository.
 
-push changes to remote, iinet repository.
+git commit
+
+will commit all files added in the last step.
+
+push and merge changes to remote, iinet repository.
+
+git push
+
 
 
