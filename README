@@ -22,7 +22,7 @@ cd ~/swdev
 
 Best to login to github first and check out help section there for clear instructions.
 
-Follow setting up ssh key instructions first.
+Follow setting up ssh key instructions first: http://help.github.com/linux-set-up-git/
 
 change to ~/swdev on local computer.
 
