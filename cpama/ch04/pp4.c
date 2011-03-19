@@ -2,7 +2,7 @@
  * file: pp4.c
  * Programming Project 3
  * ch4: C Programmign: A modern Approach
- * gcc -Wall -o pp4 pp4.c
+ * gcc -Wall -o pp4~ pp4.c
  * 
  * Convert a base 10 int to octal.
  *  
