@@ -1,10 +1,10 @@
 /*********************************************************
  * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King																				 *
+ * By K. N. King					 *
  * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
- * All rights reserved.																	*
+ * All rights reserved.					 *
  * This program may be freely distributed for class use, *
- * provided that this copyright notice is retained.			*
+ * provided that this copyright notice is retained.	 *
  *********************************************************/
 
 /* date.c (Chapter 5, page 89) */
