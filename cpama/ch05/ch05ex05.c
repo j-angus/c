@@ -3,7 +3,7 @@
  * By K. N. King					 *
  *********************************************************/
 
-/* ch05ex05.c */
+/* ch05ex08.c */
 /* write a single expression whose value is either -1, 0, or +1,
  * depending on whether i is less than, equal to, or greater than j
  * respectively. */
