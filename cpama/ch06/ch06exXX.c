@@ -78,6 +78,26 @@ int main(void)
 		printf("%d is divisable by %d\n", n, d);
 	else
 		printf("%d is prime.\n", n);
-	
+
+	/* Ex13 */
+	/* Rewrite loop so it has an empty body:
+	 */
+	int m = 100;
+	for (n = 0; m > 0; n++) {
+	 	m /= 2;
+	 	printf("m == %d\n", m);
+	}
+
+	m = 100;
+	for (n = 0, m /= 2; m > 0; ++n, m /= 2)
+		printf("m == %d\n", m);
+	printf("m == %d\n", m);
+	/*
+	 * given up on this problem for now, a real ball buster!
+	 * problem is, can't get body to print m == 0...
+	 * but maybe m == 0 after the last iteration?
+	 * yup, that's it!
+	 */
+
 	return 0;
 }
