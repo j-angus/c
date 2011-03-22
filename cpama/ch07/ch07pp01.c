@@ -7,7 +7,7 @@
 /* Prints a table of squares using a for statement */
 
 /* 
- * ch07ex02.c
+ * ch07pp01.c
  * loops. 
  */
 
