@@ -21,12 +21,12 @@ int main(void)
 	int ch; /* user input */
 	char sentence[MAX_LEN]; /* array to store user entered sentence */
 	char terminator = '\0'; /* holds end of sentence terminator */
-	int i = 0; /* array index */
+	int i, j; /* array index */
 
-	for (; i < MAX_LEN; ++i)
+	for (i = 0; i < MAX_LEN; ++i)
 		sentence[i] = '\0';
 
-	printf("Enter a sentence (max %d char long): ", MAX_LEN);
+	printf("Enter a sentence (max %d char long,)'.', '!', '?' to end: ", MAX_LEN);
 	for (i = 0; i < MAX_LEN; ++i) {
 		ch = getchar();
 		if (ch != '.' && ch != '!' && ch != '?') {
@@ -39,13 +39,26 @@ int main(void)
 	}
 
 	printf("Reversal of sentence: ");
-	for (i = 0; i < MAX_LEN; ++i) {
-		if (sentence[i] != '\0')
+	
+	/* seek from end of array backwards to the last letter */
+	i = MAX_LEN - 1;
+	while (sentence[i] != '\0')
+		--i;
+	j = i;
+	for (; i >= 0; --i) {
+		if (sentence[i] == ' ') {
+			for (int k = i + 1; k <=j; ++k) 
+				printf("%c", sentence[k]);
 			printf("%c", sentence[i]);
-		else {
-			printf("%c\n", terminator);
-			break;
+			j = i;
 		}
+		else if (sentence[j] == ' ')
+			j = i;
 	}
+	for (i = 0; i <=j; ++i) 
+		printf("%c", sentence[i]);
+		
+	printf("%c\n", terminator);
+	
 	return 0;
 }
