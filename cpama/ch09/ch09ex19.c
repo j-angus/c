@@ -18,7 +18,7 @@ int main(void)
 	printf("From C PROGRAMMING: A MODERN APPROACH, 2nd Edition\n"
 		"Chapter 9, Exercise 19\n\n");
 	
-	int num = 298753;
+	int num = 55;
 
 	pb(num); /* prints 'num' as a binary number */
 	
