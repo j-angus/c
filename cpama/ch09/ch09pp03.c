@@ -14,7 +14,8 @@
 #include <time.h>
 
 #define ROW 10
-#define COL 10 
+#define COL 10
+
 void generate_random_walk(char walk[ROW][COL]);
 void print_array(char walk[ROW][COL]);
 
