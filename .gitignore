@@ -6,3 +6,5 @@
 *.[oa]
 # compiled binaries ending with tilde '~'
 *~
+#vim swap files
+*.swp
