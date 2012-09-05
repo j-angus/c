@@ -3,4 +3,4 @@ I want to learn how to perform input and output using stdin and files in c.
 
 compile f-ops.c with:
 
-gcc -std=c99 -Wall f-ops.c -o f-ops
+gcc -std=c99 -Wall f-ops.c -o f-ops~
