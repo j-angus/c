@@ -30,19 +30,48 @@ char *read_line(FILE *src, size_t max_char)
 	printf("%s\n", __func__);
 	char *buf = NULL;
 	size_t bufsz = 2;
-	size_t num_char = 0;
+	int ch;
+	size_t num_ch = 0;
 
 	if ((buf = malloc(bufsz)) == NULL) {
 		printf("ERROR in %s(): malloc failed to allocate memory.\n",
 				__func__);
+		return NULL;
 	}
-	else {
-		while (*buf = getchar(src)) {
-			if (*buf++ == '\n') {
+	
+	while ((ch = getc(src)) != EOF) {
+		printf("\nch == [%c]:[%d]\n", ch, ch);		
+		if (ch == '\n') {
+			break;
+		}
+		buf[num_ch] = ch;
+		++num_ch;
+		if (num_ch == max_char)
+			break;
+		if (num_ch == (bufsz - 1)) {
+			printf("num_ch: %u, \
+				bufsz: %u, buf: %p\n",
+				num_ch, bufsz, buf);
+
+			bufsz += bufsz;
+			if ((buf = realloc(buf, bufsz)) == NULL) {
+				printf("ERROR in %s(): \
+					malloc failed to allocate memory.\n",
+					__func__);
 				break;
 			}
-			++num_char;
-			if (num_char > (bufsz - 2)) {
-
+		}
+	}
+	/* NULL terminate string */
+	if ((num_ch == 0) && (ch == EOF)) {
+		free(buf);	
+		buf = NULL;
+	}
+	else {
+		buf[num_ch] = '\0';
+	}
+	if (buf) {
+		printf("%s(), buf[0], [%c]:[%d]\n", __func__, buf[0], buf[0]);	
+	}
 	return buf;
 }

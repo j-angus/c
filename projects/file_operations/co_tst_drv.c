@@ -21,9 +21,12 @@ int main(int argc, char *argv[])
 	}                                                                          
 
 	while ((line_buf = read_line(data_src, max_line_length))) {
-		printf("%s\n", line_buf);
-		printf("strlen(line_buf): %u\n", strlen(line_buf));
+		printf("%s(), line_buf: %s\n", __func__, line_buf);
+		printf("%s(), strlen(line_buf): %u\n", __func__, strlen(line_buf));
 	}
 
+	if ((data_src != NULL) && (data_src != stdin)) {
+		fclose(data_src);
+	}
 	return 0;
 }
